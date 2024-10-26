@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
+const apiRoutes = require("./routes/api");
+app.use('/api', apiRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello, World!');
